@@ -7,6 +7,10 @@ angular.module('angularDemoApp', [])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/wtf', {
+        templateUrl: 'views/wtf.html',
+        controller: 'WtfCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
