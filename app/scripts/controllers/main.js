@@ -1,10 +1,9 @@
 'use strict';
 
 angular.module('angularDemoApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ChannelCtrl', function ($scope, $http) {
+    $http.get("/scripts/json/channels.json").
+    success(function (data) {
+        $scope.channels = data;
+    });
   });

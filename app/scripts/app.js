@@ -5,7 +5,7 @@ angular.module('angularDemoApp', [])
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'ChannelCtrl'
       })
       .when('/wtf', {
         templateUrl: 'views/wtf.html',
