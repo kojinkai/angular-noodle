@@ -4,8 +4,8 @@ angular.module('angularDemoApp', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'ChannelCtrl'
+        templateUrl: 'views/programmes.html',
+        controller: 'ProgramlistCtrl'
       })
       .when('/wtf', {
         templateUrl: 'views/wtf.html',
