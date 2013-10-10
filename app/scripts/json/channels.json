@@ -1,17 +1,17 @@
 [
   {
-    "name": "zeropunctuation",
-    "url": "http://api.reddit.com/r/wtf",
+    "name": "What the jeebus...",
+    "url": "/scripts/json/wtf.json",
     "image": ""
   },
   {
-    "name": "Husky StarCraft",
-    "url": "http://api.reddit.com/r/aww",
+    "name": "Gifs or Jifs",
+    "url": "/scripts/json/gifs.json",
     "image": ""
   },
   {
-    "name": "YogsCast",
-    "url": "http://api.reddit.com/r/fights",
+    "name": "My Reaction when",
+    "url": "/scripts/json/gifs.json",
     "image": ""
   }
 ]

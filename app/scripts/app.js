@@ -5,11 +5,7 @@ angular.module('angularDemoApp', [])
     $routeProvider
       .when('/', {
         templateUrl: 'views/programmes.html',
-        controller: 'ProgramlistCtrl'
-      })
-      .when('/wtf', {
-        templateUrl: 'views/wtf.html',
-        controller: 'WtfCtrl'
+        controller: 'ProgramCtrl'
       })
       .otherwise({
         redirectTo: '/'

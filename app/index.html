@@ -24,15 +24,23 @@
       <script src="bower_components/es5-shim/es5-shim.js"></script>
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-    <div class="speakers-sidebar" ng-controller="ChannelCtrl">
+    <div class="channel-sidebar" ng-controller="ChannelCtrl">
       <ul>
           <li ng-repeat="channel in channels">
             <h4 ng-click="load(channel)">{{channel.name}}</h4>
           </li>
       </ul>
     </div>
+    <div class="programlist-sidebar" ng-controller="ProgramlistCtrl">
+      <ul>
+          <li ng-repeat="program in programmes">
+            <h4 ng-click="load(program.data)">{{program.data.title}}</h4>
+          </li>
+      </ul>
+    </div>    
     <!-- Add your site or application content here -->
     <div class="container" ng-view="">
+
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -76,6 +84,7 @@
         <script src="scripts/controllers/channel.js"></script>
         <script src="scripts/controllers/programList.js"></script>
         <script src="scripts/controllers/wtf.js"></script>
+        <script src="scripts/controllers/program.js"></script>
         <!-- endbuild -->
 </body>
 </html>
