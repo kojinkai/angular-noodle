@@ -27,7 +27,7 @@
     <div class="channel-sidebar" ng-controller="ChannelCtrl">
       <ul>
           <li ng-repeat="channel in channels">
-            <h4 ng-click="load(channel)">{{channel.name}}</h4>
+            <h4 ng-click="pushLoad(channel.url)">{{channel.name}}</h4>
           </li>
       </ul>
     </div>
@@ -73,6 +73,7 @@
         <script src="scripts/controllers/programList.js"></script>
         <script src="scripts/controllers/wtf.js"></script>
         <script src="scripts/controllers/program.js"></script>
+        <script src="scripts/services/programList.js"></script>
         <!-- endbuild -->
 </body>
 </html>
