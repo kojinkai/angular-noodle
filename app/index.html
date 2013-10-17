@@ -24,14 +24,17 @@
       <script src="bower_components/es5-shim/es5-shim.js"></script>
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-    <div class="channel-sidebar" ng-controller="ChannelCtrl">
+    <div class="banner" ng-controller="BannerCtrl">
+      <h1 class="site-title">{{title}}</h1>
+    </div>
+    <div class="channel-sidebar sidebar" ng-controller="ChannelCtrl">
       <ul>
           <li ng-repeat="channel in ProgramList.channelList">
             <h4 ng-click="selectChannel(channel)">{{channel.name}}</h4>
           </li>
       </ul>
     </div>
-    <div class="program-sidebar" ng-controller="ProgramlistCtrl">
+    <div class="program-sidebar sidebar" ng-controller="ProgramlistCtrl">
       <ul>
           <li ng-repeat="program in ProgramList.programTitles">
             <h4 ng-click="loadSelectedPrograms(program.url)">{{program.title}}</h4>
@@ -74,6 +77,7 @@
         <script src="scripts/controllers/wtf.js"></script>
         <script src="scripts/controllers/program.js"></script>
         <script src="scripts/services/programList.js"></script>
+        <script src="scripts/controllers/banner.js"></script>
         <!-- endbuild -->
 </body>
 </html>

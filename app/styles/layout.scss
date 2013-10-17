@@ -1,0 +1,25 @@
+.banner {
+  @include box-padding;
+}
+.sidebar {
+  @include box-padding;
+  ul {
+    @include nav;
+  }
+}
+.channel-sidebar {
+  @include span-columns(2 of 12);
+}
+.program-sidebar {
+  @include span-columns(3 of 12); 
+}
+
+.hero-unit {
+  @include span-columns(7 of 12); 
+  @include box-padding;
+  h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+}
