@@ -5,12 +5,13 @@ angular.module('angularDemoApp')
     
     // Private variables here
 
-    // Public API here
-
     var channelData = [],
         programData = [];
 
     (function () {
+      // self-invoking function
+      // to pull our main channels
+      
       var i = 0;
 
       $http.get('/scripts/json/channels.json').
@@ -21,12 +22,12 @@ angular.module('angularDemoApp')
       });
     })();
 
+    // Start assigning our public API here
     this.channelList = channelData;
     this.programTitles = programData;
     this.selectedChannel = null;
 
     this.setSelectedChannel = function(channel) {
-      console.log('our selected channel is: ', channel);
       var i = 0;
 
       if ( this.channelList.indexOf(channel) > -1 ) {
@@ -37,11 +38,9 @@ angular.module('angularDemoApp')
           // programs | http://stackoverflow.com/questions/1232040/how-to-empty-an-array-in-javascript
           programData.length = 0;
 
-          console.log('raw data: ', data[0].data.children, '\n\n');
           for ( i; i < data[0].data.children.length; i++ ) {
             programData.push(data[0].data.children[i].data);
           }
-          console.log('our new object: ', programData);
         });
       }
     };
