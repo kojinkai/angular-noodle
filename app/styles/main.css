@@ -1,7 +1,4 @@
-$iconSpritePath: "../images/glyphicons-halflings.png";
-$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
-
-@import "bootstrap-sass/lib/bootstrap";
+@import "base.scss";
 
 /* Put your CSS here */
 html, body {
@@ -24,6 +21,12 @@ body {
     background-color: #eee;
     border-radius: 6px;
     padding: 60px;
+}
+
+.hero-unit h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
 }
 
 .hero-unit h1 {

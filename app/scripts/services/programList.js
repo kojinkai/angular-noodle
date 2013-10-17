@@ -34,8 +34,8 @@ angular.module('angularDemoApp')
         this.selectedChannel = channel;
         $http.get(channel.url).
         success(function (data) {
-          // Empty out the old array of
-          // programs | http://stackoverflow.com/questions/1232040/how-to-empty-an-array-in-javascript
+          // Empty out the old array of programs by setting length to 0
+          // http://stackoverflow.com/questions/1232040/how-to-empty-an-array-in-javascript
           programData.length = 0;
 
           for ( i; i < data[0].data.children.length; i++ ) {

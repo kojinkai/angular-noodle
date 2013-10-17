@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>A Simple Reddit Client</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -31,7 +31,7 @@
           </li>
       </ul>
     </div>
-    <div class="programlist-sidebar" ng-controller="ProgramlistCtrl">
+    <div class="program-sidebar" ng-controller="ProgramlistCtrl">
       <ul>
           <li ng-repeat="program in ProgramList.programTitles">
             <h4 ng-click="loadSelectedPrograms(program.url)">{{program.title}}</h4>
