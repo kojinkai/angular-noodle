@@ -1,40 +1,49 @@
 'use strict';
 
 angular.module('angularDemoApp')
-  .factory('ProgramList', function ($http) {
+  .service('ProgramList', function ($http) {
     
     // Private variables here
-    var returnData = [],
-        i = 0,
-        pushLoadURL = "";
 
     // Public API here
-    return {
-      // get request returns an
-      // array of objects containing
-      // channel info and pushes them into above
-      // variable to be returned
-      init: function (channelURL) {
-        $http.get(channelURL).
+
+    var channelData = [],
+        programData = [];
+
+    (function () {
+      var i = 0;
+
+      $http.get('/scripts/json/channels.json').
+      success(function (data) {
+        for ( i; i < data.length; i++ ) {
+          channelData.push(data[i]);
+        }
+      });
+    })();
+
+    this.channelList = channelData;
+    this.programTitles = programData;
+    this.selectedChannel = null;
+
+    this.setSelectedChannel = function(channel) {
+      console.log('our selected channel is: ', channel);
+      var i = 0;
+
+      if ( this.channelList.indexOf(channel) > -1 ) {
+        this.selectedChannel = channel;
+        $http.get(channel.url).
         success(function (data) {
-            for ( i; i < data.length; i++ ) {
-              returnData.push(data[i]);
-            }
+          // Empty out the old array of
+          // programs | http://stackoverflow.com/questions/1232040/how-to-empty-an-array-in-javascript
+          programData.length = 0;
+
+          console.log('raw data: ', data[0].data.children, '\n\n');
+          for ( i; i < data[0].data.children.length; i++ ) {
+            programData.push(data[0].data.children[i].data);
+          }
+          console.log('our new object: ', programData);
         });
-        return returnData;
-      },
-
-      pushLoad: function(data) {
-        // takes a URL string from the controller
-        // (URL from the data previously pulled from the init function)
-        // and pushes it to the above variable to be shared with the otehr controllers
-        console.log(data);
-        pushLoadURL = data;
-        console.log("pushload is: ", pushLoadURL);
-      },
-
-      pullLoad: function() {
-        return pushLoadURL;
       }
     };
+
   });
