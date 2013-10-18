@@ -6,7 +6,8 @@ angular.module('angularDemoApp')
     // Private variables here
 
     var channelData = [],
-        programData = [];
+        programData = [],
+        programView = {};
 
     (function () {
       // self-invoking function
@@ -24,8 +25,10 @@ angular.module('angularDemoApp')
 
     // Start assigning our public API here
     this.channelList = channelData;
-    this.programTitles = programData;
+    this.programData = programData;
+    this.programView = programView;
     this.selectedChannel = null;
+    this.selectedData = null;
 
     this.setSelectedChannel = function(channel) {
       var i = 0;
@@ -43,6 +46,13 @@ angular.module('angularDemoApp')
           }
         });
       }
+    };
+
+    this.setData = function(data) {
+      this.selectedData = data;
+      // programView.length = 0;
+      this.programView = data;
+      window.programView = data;
     };
 
   });

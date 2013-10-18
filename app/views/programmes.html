@@ -5,9 +5,12 @@
   <h2>Some Gifs</h2>
   <section id="programs">
     <div>
-      <img ng-src="{{url}}" alt="{{title}}">
+      <a ng-href="http://reddit.com{{programView.permalink}}"
+        <img ng-src="{{programView.url}}" alt="{{programView.title}}">
+      </a>
       <div class="program-meta">
-        <p>{{score}}</p>
+        <p>{{programView.title}}</p>
+        <p>{{programView.score}}</p>
       </div>
     </div>
   </section>

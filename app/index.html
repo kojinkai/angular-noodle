@@ -36,8 +36,8 @@
     </div>
     <div class="program-sidebar sidebar" ng-controller="ProgramlistCtrl">
       <ul>
-          <li ng-repeat="program in ProgramList.programTitles">
-            <h4 ng-click="loadSelectedPrograms(program.url)">{{program.title}}</h4>
+          <li ng-repeat="program in ProgramList.programData">
+            <h4 ng-click="loadSelectedPrograms(program)">{{program.title}}</h4>
           </li>
       </ul>
     </div>    
