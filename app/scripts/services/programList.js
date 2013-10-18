@@ -7,7 +7,7 @@ angular.module('angularDemoApp')
 
     var channelData = [],
         programData = [],
-        programView = {};
+        programView = {"title": "our tytle", "score": "our scoore"};
 
     (function () {
       // self-invoking function
@@ -50,7 +50,6 @@ angular.module('angularDemoApp')
 
     this.setData = function(data) {
       this.selectedData = data;
-      // programView.length = 0;
       this.programView = data;
       window.programView = data;
     };
