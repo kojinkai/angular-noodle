@@ -2,12 +2,15 @@
     <div ng-show="loading" class="loading-message">
     Reloading...
   </div>
-  <h1>Some Gifs</h1>
+  <h2>Some Gifs</h2>
   <section id="programs">
     <div>
-      <img ng-src="{{url}}" alt="{{title}}">
+      <a ng-href="http://reddit.com{{ProgramList.programView.permalink}}">
+        <img ng-src="{{ProgramList.programView.url}}" alt="{{ProgramList.programView.title}}">
+      </a>
       <div class="program-meta">
-        <p>{{score}}</p>
+        <p>{{ProgramList.programView.title}}</p>
+        <p>{{ProgramList.programView.score}}</p>
       </div>
     </div>
   </section>
