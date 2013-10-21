@@ -29,7 +29,7 @@
     </div>
     <div class="channel-sidebar sidebar" ng-controller="ChannelCtrl">
       <ul>
-          <li ng-repeat="channel in ProgramList.channelList">
+          <li ng-repeat="channel in ProgramList.channelList" class="{{isSelected(author) || ''}}">
             <h4 ng-click="selectChannel(channel)">{{channel.name}}</h4>
           </li>
       </ul>
