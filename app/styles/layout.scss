@@ -41,8 +41,8 @@ body {
 
 .hero-unit {
   @include span-columns(7); 
-  @include pad();
   @include reset-display;
+  padding-left: 2em;
   h1 {
     font-size: 60px;
     line-height: 1;

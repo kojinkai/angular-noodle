@@ -7,9 +7,9 @@
 }
 
 .channel-sidebar {
-  background-color: $channelSidebar;
+  background-color: darken($base-grey, 0.5);
 }
 
 .program-sidebar {
-  background-color: $programSideBar;
+  background-color: darken($base-grey, 0.5);
 }
