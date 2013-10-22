@@ -16,9 +16,14 @@ body {
   @include box-padding;
 }
 .sidebar {
-  @include box-padding;
   ul {
     @include nav;
+    li {
+      padding: 0.5em 0.5em 0.5em 2em;
+      line-height: 2em;
+      background-color: $white;
+      margin-bottom: 1px;
+    }
   }
 }
 .page-wrap {
@@ -27,17 +32,16 @@ body {
 }
 .channel-sidebar {
   @include span-columns(2);
-  @include pad();
+  padding-right: 0;
 }
 .program-sidebar {
   @include span-columns(3);
-  @include pad();
+  padding-right: 0;
 }
 
 .hero-unit {
   @include span-columns(7); 
   @include pad();
-  // @include box-padding;
   @include reset-display;
   h1 {
     font-size: 60px;
