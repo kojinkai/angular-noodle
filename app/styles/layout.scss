@@ -1,3 +1,17 @@
+/***********
+= Full height containers
+************/
+html,
+body,
+.page-wrap,
+.sidebar {
+  height: 100%;
+}
+
+body {
+  // @include outer-container;
+}
+
 .banner {
   @include box-padding;
 }
@@ -7,16 +21,24 @@
     @include nav;
   }
 }
+.page-wrap {
+  @include span-columns(12);
+  @include row(table);
+}
 .channel-sidebar {
-  @include span-columns(2 of 12);
+  @include span-columns(2);
+  @include pad();
 }
 .program-sidebar {
-  @include span-columns(3 of 12); 
+  @include span-columns(3);
+  @include pad();
 }
 
 .hero-unit {
-  @include span-columns(7 of 12); 
-  @include box-padding;
+  @include span-columns(7); 
+  @include pad();
+  // @include box-padding;
+  @include reset-display;
   h1 {
     font-size: 60px;
     line-height: 1;

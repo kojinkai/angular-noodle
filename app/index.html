@@ -27,25 +27,26 @@
     <div class="banner" ng-controller="BannerCtrl">
       <h1 class="site-title">{{title}}</h1>
     </div>
-    <div class="channel-sidebar sidebar" ng-controller="ChannelCtrl">
-      <ul>
-          <li ng-repeat="channel in ProgramList.channelList" class="{{isSelected(author) || ''}}">
-            <h4 ng-click="selectChannel(channel)">{{channel.name}}</h4>
-          </li>
-      </ul>
-    </div>
-    <div class="program-sidebar sidebar" ng-controller="ProgramlistCtrl">
-      <ul>
-          <li ng-repeat="program in ProgramList.programData">
-            <h4 ng-click="loadSelectedPrograms(program)">{{program.title}}</h4>
-          </li>
-      </ul>
-    </div>    
-    <!-- Add your site or application content here -->
-    <div class="container" ng-view="">
+    <div class="page-wrap">
+      <div class="channel-sidebar sidebar" ng-controller="ChannelCtrl">
+        <ul>
+            <li ng-repeat="channel in ProgramList.channelList" class="{{isSelected(author) || ''}}">
+              <h4 ng-click="selectChannel(channel)">{{channel.name}}</h4>
+            </li>
+        </ul>
+      </div>
+      <div class="program-sidebar sidebar" ng-controller="ProgramlistCtrl">
+        <ul>
+            <li ng-repeat="program in ProgramList.programData">
+              <h4 ng-click="loadSelectedPrograms(program)">{{program.title}}</h4>
+            </li>
+        </ul>
+      </div>    
+      <!-- Add your site or application content here -->
+      <div class="hero-unit" ng-view="">
 
+      </div>
     </div>
-
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

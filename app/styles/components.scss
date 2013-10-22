@@ -1,6 +1,15 @@
-.channel-sidebar {
-    background-color: $channelSidebar;
+.page-wrap {
+  background: $base-grey;
 }
+.banner {
+  background-color: $banner;
+  color: $white;
+}
+
+.channel-sidebar {
+  background-color: $channelSidebar;
+}
+
 .program-sidebar {
-    background-color: $programSideBar;
+  background-color: $programSideBar;
 }
