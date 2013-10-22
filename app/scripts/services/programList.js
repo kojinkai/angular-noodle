@@ -17,6 +17,7 @@ angular.module('angularDemoApp')
 
       $http.get('/scripts/json/channels.json').
       success(function (data) {
+        window.channels = data;
         for ( i; i < data.length; i++ ) {
           channelData.push(data[i]);
         }
@@ -31,6 +32,7 @@ angular.module('angularDemoApp')
     this.selectedData = null;
 
     this.setSelectedChannel = function(channel) {
+      console.log("channel is: ", channel);
       var i = 0;
 
       if ( this.channelList.indexOf(channel) > -1 ) {

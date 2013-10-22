@@ -24,6 +24,7 @@ describe('Controller: ChannelCtrl', function () {
   }));
 
   it('should return an object that matches the selected channel', function () {
-    expect(scope.isSelected).toBeTruthy();
-  });
+    // expect(scope.isSelected).toBeTruthy();
+    $httpBackend.expectGET('/auth.py');
+  });  
 });
